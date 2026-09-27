@@ -1,3 +1,13 @@
+library(ggplot2)
+
 summary(cars)
 
 print ("Hello World!")
+
+data <- data.frame(
+  group = c("Experimental", "Control"), 
+  happiness = c(20, 5))
+  
+ggplot(data, aes(x=group, y=happiness)) +
+  geom_bar(stat = "identity")
+
